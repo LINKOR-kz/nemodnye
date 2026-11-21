@@ -1,0 +1,658 @@
+{
+ "settings": {
+  "name": "Братья Немодные",
+  "whatsapp": "77003812652",
+  "instagram": "br.nemodnye_ast",
+  "marquee": [
+   "Шоурум в Астане",
+   "Рассрочка Kaspi 0-0-24",
+   "Унисекс-костюмы oversize",
+   "Ждём вас с 11:00 до 21:00",
+   "Керей-Жанибек хандар, 44/4"
+  ],
+  "heroKicker": "Новая коллекция · Зима 2026",
+  "heroTitle": "Братья\nНемодные",
+  "heroText": "Оригинальные кроссовки, пуховики и streetwear в Астане. Шоурум на Керей-Жанибек хандар, 44/4 — приходите примерить или заказывайте в WhatsApp.",
+  "heroImage": "media/brothers-hero.webp",
+  "aboutTitle": "Unisex modern wear",
+  "aboutText": "Шоурум на Керей-Жанибек хандар, 44/4: унисекс-одежда, футболки oversize, широкие джинсы, кепки и кроссовки. Примерьте всё на месте — подскажем размер и соберём образ целиком. Не нашли нужное? Напишите в WhatsApp — привезём.",
+  "rating": "4.6",
+  "reviews": "41",
+  "gallery": [
+   "media/ast-lime-car.webp",
+   "media/ast-duo.webp",
+   "media/ast-bag.webp"
+  ],
+  "branches": [
+   {
+    "city": "Астана",
+    "address": "ул. Керей-Жанибек хандар, 44/4",
+    "hours": "Ежедневно 11:00–21:00",
+    "whatsapp": "77003812652",
+    "instagram": "br.nemodnye_ast",
+    "map": "https://2gis.kz/astana/firm/70000001112104899"
+   }
+  ],
+  "heroImage2": "media/brothers-color.webp",
+  "heroCaption": "Новая коллекция уже в шоуруме",
+  "heroTag": ""
+ },
+ "cats": [
+  {
+   "id": "sneakers",
+   "name": "Кроссовки"
+  },
+  {
+   "id": "jackets",
+   "name": "Куртки и пуховики"
+  },
+  {
+   "id": "suits",
+   "name": "Костюмы"
+  },
+  {
+   "id": "tops",
+   "name": "Футболки и худи"
+  },
+  {
+   "id": "pants",
+   "name": "Штаны и джинсы"
+  },
+  {
+   "id": "acc",
+   "name": "Аксессуары"
+  }
+ ],
+ "promos": [
+  {
+   "id": "p-kaspi",
+   "active": true,
+   "hero": true,
+   "theme": "red",
+   "badge": "Kaspi 0-0-24",
+   "title": "Рассрочка на 24 месяца",
+   "text": "Покупайте кроссовки и куртки в рассрочку Kaspi 0-0-24 — без переплат и первого взноса. Оформление прямо в шоуруме за пару минут.",
+   "image": "media/ast-coral-look.webp",
+   "video": "",
+   "from": "",
+   "to": "",
+   "percent": 0,
+   "applyTo": "none",
+   "cats": [],
+   "items": [],
+   "button": "Узнать подробнее"
+  },
+  {
+   "id": "p-friday",
+   "active": true,
+   "hero": true,
+   "theme": "lime",
+   "badge": "−15%",
+   "title": "Чёрная пятница на футболки",
+   "text": "Минус 15% на все футболки до конца ноября. Скидка уже учтена в ценах на сайте.",
+   "image": "media/ast-tee-carpet-black.webp",
+   "video": "",
+   "from": "2026-11-20",
+   "to": "2026-11-30",
+   "percent": 15,
+   "applyTo": "cat",
+   "cats": [
+    "tops"
+   ],
+   "items": [],
+   "button": "Смотреть футболки"
+  }
+ ],
+ "items": [
+  {
+   "id": "a-carpet-w",
+   "name": "Футболка oversize «Ковёр» белая",
+   "brand": "Братья Немодные",
+   "cat": "tops",
+   "gender": "uni",
+   "price": 18900,
+   "oldPrice": 0,
+   "tags": [
+    "hit"
+   ],
+   "status": "active",
+   "desc": "Плотный хлопок, спущенное плечо и большой принт-ковёр на спине. Made in Kazakhstan.",
+   "sizeType": "clothes",
+   "sizes": [
+    {
+     "s": "S",
+     "q": 2
+    },
+    {
+     "s": "M",
+     "q": 3
+    },
+    {
+     "s": "L",
+     "q": 3
+    },
+    {
+     "s": "XL",
+     "q": 2
+    }
+   ],
+   "photos": [
+    "media/ast-tee-carpet-white.webp"
+   ],
+   "video": ""
+  },
+  {
+   "id": "i-chicago",
+   "name": "SB Dunk Low «Chicago»",
+   "brand": "Nike",
+   "cat": "sneakers",
+   "gender": "uni",
+   "price": 54900,
+   "oldPrice": 0,
+   "tags": [
+    "hit"
+   ],
+   "status": "active",
+   "desc": "Красно-чёрная классика на скейтовой подошве SB: замша и кожа, толстый язычок, усиленная стелька Zoom Air.",
+   "sizeType": "shoes",
+   "sizes": [
+    {
+     "s": "40",
+     "q": 1
+    },
+    {
+     "s": "41",
+     "q": 2
+    },
+    {
+     "s": "42",
+     "q": 2
+    },
+    {
+     "s": "42.5",
+     "q": 1
+    },
+    {
+     "s": "43",
+     "q": 2
+    },
+    {
+     "s": "44",
+     "q": 0
+    },
+    {
+     "s": "45",
+     "q": 1
+    }
+   ],
+   "photos": [
+    "media/sb-dunk-chicago.webp"
+   ],
+   "video": ""
+  },
+  {
+   "id": "a-crop",
+   "name": "Кроп-футболка коралловая",
+   "brand": "Братья Немодные",
+   "cat": "tops",
+   "gender": "her",
+   "price": 9900,
+   "oldPrice": 0,
+   "tags": [
+    "hit"
+   ],
+   "status": "active",
+   "desc": "Укороченная футболка яркого кораллового цвета. Носите с широкими джинсами — как на фото.",
+   "sizeType": "clothes",
+   "sizes": [
+    {
+     "s": "XS",
+     "q": 1
+    },
+    {
+     "s": "S",
+     "q": 2
+    },
+    {
+     "s": "M",
+     "q": 2
+    },
+    {
+     "s": "L",
+     "q": 1
+    }
+   ],
+   "photos": [
+    "media/ast-crop-coral.webp",
+    "media/ast-crop-coral-2.webp"
+   ],
+   "video": ""
+  },
+  {
+   "id": "a-jeans",
+   "name": "Джинсы baggy washed",
+   "brand": "Братья Немодные",
+   "cat": "pants",
+   "gender": "uni",
+   "price": 27900,
+   "oldPrice": 0,
+   "tags": [
+    "new"
+   ],
+   "status": "active",
+   "desc": "Очень широкие джинсы с варкой и потёртостями. Низкая посадка, длина в пол.",
+   "sizeType": "jeans",
+   "sizes": [
+    {
+     "s": "28",
+     "q": 1
+    },
+    {
+     "s": "29",
+     "q": 1
+    },
+    {
+     "s": "30",
+     "q": 2
+    },
+    {
+     "s": "31",
+     "q": 2
+    },
+    {
+     "s": "32",
+     "q": 2
+    },
+    {
+     "s": "34",
+     "q": 1
+    },
+    {
+     "s": "36",
+     "q": 0
+    }
+   ],
+   "photos": [
+    "media/ast-jeans-baggy.webp",
+    "media/ast-jeans-baggy-2.webp"
+   ],
+   "video": ""
+  },
+  {
+   "id": "a-carpet-b",
+   "name": "Футболка oversize «Ковёр» чёрная",
+   "brand": "Братья Немодные",
+   "cat": "tops",
+   "gender": "uni",
+   "price": 18900,
+   "oldPrice": 0,
+   "tags": [
+    "new"
+   ],
+   "status": "active",
+   "desc": "Чёрная версия хита: принт-ковёр на спине, свободный крой, плотная ткань.",
+   "sizeType": "clothes",
+   "sizes": [
+    {
+     "s": "S",
+     "q": 1
+    },
+    {
+     "s": "M",
+     "q": 2
+    },
+    {
+     "s": "L",
+     "q": 3
+    },
+    {
+     "s": "XL",
+     "q": 2
+    },
+    {
+     "s": "2XL",
+     "q": 1
+    }
+   ],
+   "photos": [
+    "media/ast-tee-carpet-black.webp"
+   ],
+   "video": ""
+  },
+  {
+   "id": "i-pink",
+   "name": "Dunk Low «Pink Foam»",
+   "brand": "Nike",
+   "cat": "sneakers",
+   "gender": "her",
+   "price": 46900,
+   "oldPrice": 0,
+   "tags": [],
+   "status": "active",
+   "desc": "Нежный розовый с белым — самый популярный женский Dunk. Мягкая кожа, удобная колодка на каждый день.",
+   "sizeType": "shoes",
+   "sizes": [
+    {
+     "s": "36",
+     "q": 1
+    },
+    {
+     "s": "36.5",
+     "q": 1
+    },
+    {
+     "s": "37",
+     "q": 2
+    },
+    {
+     "s": "37.5",
+     "q": 2
+    },
+    {
+     "s": "38",
+     "q": 2
+    },
+    {
+     "s": "39",
+     "q": 1
+    },
+    {
+     "s": "40",
+     "q": 0
+    }
+   ],
+   "photos": [
+    "media/dunk-pink.webp"
+   ],
+   "video": ""
+  },
+  {
+   "id": "a-yoshe",
+   "name": "Футболка «Yoshé»",
+   "brand": "Yoshé",
+   "cat": "tops",
+   "gender": "uni",
+   "price": 16900,
+   "oldPrice": 0,
+   "tags": [
+    "new"
+   ],
+   "status": "active",
+   "desc": "Белая oversize-футболка с орнаментом и стекающим принтом.",
+   "sizeType": "clothes",
+   "sizes": [
+    {
+     "s": "S",
+     "q": 1
+    },
+    {
+     "s": "M",
+     "q": 2
+    },
+    {
+     "s": "L",
+     "q": 2
+    },
+    {
+     "s": "XL",
+     "q": 1
+    }
+   ],
+   "photos": [
+    "media/ast-tee-yoshe.webp"
+   ],
+   "video": ""
+  },
+  {
+   "id": "a-cap-cross",
+   "name": "Кепка с крестами белая",
+   "brand": "Братья Немодные",
+   "cat": "acc",
+   "gender": "uni",
+   "price": 12900,
+   "oldPrice": 0,
+   "tags": [],
+   "status": "active",
+   "desc": "Белая бейсболка с объёмной вышивкой-крестами и металлическим кольцом. Регулируемый ремешок.",
+   "sizeType": "one",
+   "sizes": [
+    {
+     "s": "ONE SIZE",
+     "q": 4
+    }
+   ],
+   "photos": [
+    "media/ast-cap-cross.webp"
+   ],
+   "video": ""
+  },
+  {
+   "id": "i-nike-black",
+   "name": "Пуховик Swoosh глянцевый чёрный",
+   "brand": "Nike",
+   "cat": "jackets",
+   "gender": "uni",
+   "price": 74900,
+   "oldPrice": 0,
+   "tags": [
+    "hit"
+   ],
+   "status": "active",
+   "desc": "Объёмный глянцевый пуховик с капюшоном. Лёгкий, тёплый, отлично смотрится с джоггерами.",
+   "sizeType": "clothes",
+   "sizes": [
+    {
+     "s": "S",
+     "q": 1
+    },
+    {
+     "s": "M",
+     "q": 2
+    },
+    {
+     "s": "L",
+     "q": 2
+    },
+    {
+     "s": "XL",
+     "q": 1
+    },
+    {
+     "s": "2XL",
+     "q": 1
+    }
+   ],
+   "photos": [
+    "media/nike-puffer-black.webp"
+   ],
+   "video": ""
+  },
+  {
+   "id": "a-siesta",
+   "name": "Футболка «Todo el día siesta»",
+   "brand": "Братья Немодные",
+   "cat": "tops",
+   "gender": "uni",
+   "price": 14900,
+   "oldPrice": 0,
+   "tags": [],
+   "status": "active",
+   "desc": "Белая футболка с красной надписью — «весь день сиеста». Отлично сидит навыпуск.",
+   "sizeType": "clothes",
+   "sizes": [
+    {
+     "s": "S",
+     "q": 2
+    },
+    {
+     "s": "M",
+     "q": 3
+    },
+    {
+     "s": "L",
+     "q": 2
+    },
+    {
+     "s": "XL",
+     "q": 1
+    }
+   ],
+   "photos": [
+    "media/ast-tee-siesta.webp"
+   ],
+   "video": ""
+  },
+  {
+   "id": "i-aj1-low",
+   "name": "Air Jordan 1 Low «Reverse Swoosh»",
+   "brand": "Jordan",
+   "cat": "sneakers",
+   "gender": "his",
+   "price": 79900,
+   "oldPrice": 0,
+   "tags": [
+    "hit"
+   ],
+   "status": "active",
+   "desc": "Перевёрнутый свуш, винтажная подошва цвета sail и голубые акценты. Один из самых узнаваемых силуэтов.",
+   "sizeType": "shoes",
+   "sizes": [
+    {
+     "s": "41",
+     "q": 1
+    },
+    {
+     "s": "42",
+     "q": 1
+    },
+    {
+     "s": "42.5",
+     "q": 1
+    },
+    {
+     "s": "43",
+     "q": 2
+    },
+    {
+     "s": "44",
+     "q": 1
+    },
+    {
+     "s": "45",
+     "q": 0
+    }
+   ],
+   "photos": [
+    "media/aj1-low-reverse.webp"
+   ],
+   "video": ""
+  },
+  {
+   "id": "a-caps",
+   "name": "Кепка washed (8 цветов)",
+   "brand": "Братья Немодные",
+   "cat": "acc",
+   "gender": "uni",
+   "price": 9900,
+   "oldPrice": 0,
+   "tags": [],
+   "status": "active",
+   "desc": "Хлопковая кепка с эффектом стирки: серая, графит, бежевая, розовая, синяя и другие. Цвет уточняйте в WhatsApp.",
+   "sizeType": "one",
+   "sizes": [
+    {
+     "s": "ONE SIZE",
+     "q": 10
+    }
+   ],
+   "photos": [
+    "media/ast-caps.webp"
+   ],
+   "video": ""
+  },
+  {
+   "id": "i-cactus",
+   "name": "Костюм Four Cactus белый",
+   "brand": "Four Cactus",
+   "cat": "suits",
+   "gender": "uni",
+   "price": 39900,
+   "oldPrice": 0,
+   "tags": [
+    "hit"
+   ],
+   "status": "active",
+   "desc": "Худи и широкие брюки с контрастными лампасами. Плотный футер, вышивка на груди.",
+   "sizeType": "clothes",
+   "sizes": [
+    {
+     "s": "S",
+     "q": 1
+    },
+    {
+     "s": "M",
+     "q": 2
+    },
+    {
+     "s": "L",
+     "q": 2
+    },
+    {
+     "s": "XL",
+     "q": 1
+    }
+   ],
+   "photos": [
+    "media/suit-four-cactus.webp"
+   ],
+   "video": ""
+  },
+  {
+   "id": "i-team-green",
+   "name": "Dunk Low «Team Green»",
+   "brand": "Nike",
+   "cat": "sneakers",
+   "gender": "his",
+   "price": 44900,
+   "oldPrice": 0,
+   "tags": [],
+   "status": "active",
+   "desc": "Белая кожа и тёмно-зелёные накладки в стиле университетских команд. Простая и очень носибельная пара.",
+   "sizeType": "shoes",
+   "sizes": [
+    {
+     "s": "40",
+     "q": 1
+    },
+    {
+     "s": "41",
+     "q": 2
+    },
+    {
+     "s": "42",
+     "q": 3
+    },
+    {
+     "s": "43",
+     "q": 2
+    },
+    {
+     "s": "44",
+     "q": 2
+    },
+    {
+     "s": "45",
+     "q": 1
+    },
+    {
+     "s": "46",
+     "q": 1
+    }
+   ],
+   "photos": [
+    "media/dunk-team-green.webp"
+   ],
+   "video": ""
+  }
+ ]
+}

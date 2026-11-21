@@ -3,8 +3,8 @@
   'use strict';
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
-  var esc = BN.esc, money = BN.money, API = BN.API;
-  var TOKEN_KEY = 'bn_admin_token';
+  var esc = BN.esc, money = BN.money, API = BN.APIC;
+  var TOKEN_KEY = 'bn_admin_token_' + BN.CITY;
   var token = '', D = null, ver = 0, tab = 'items', itemCat = '', itemQ = '';
 
   function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); if (v === null) localStorage.removeItem(k); else localStorage.setItem(k, v); } catch (e) { return null; } }
@@ -33,7 +33,7 @@
     return call('/admin/data').then(function (r) {
       ver = r.version || 0;
       if (r.data) return r.data;
-      return fetch('data/catalog.json?t=' + Date.now()).then(function (x) { return x.json(); });
+      return fetch(BN.BASE + 'data/catalog-' + BN.CITY + '.json?t=' + Date.now()).then(function (x) { return x.json(); });
     }).then(function (d) { D = normalize(d); unbusy(); renderAll(); })
       .catch(function (e) { unbusy(); toast(e.message, 'err'); });
   }
@@ -557,6 +557,7 @@
       '<div class="row2">' + f('rating', 'Рейтинг 2ГИС', '4.9') + f('reviews', 'Кол-во отзывов', '1028') + '</div></section>' +
       '<section class="box"><h3>Главный экран</h3>' + f('heroKicker', 'Надпись над заголовком', 'Кроссовки · Одежда · Куртки') + ta('heroTitle', 'Большой заголовок', 'Каждая строка — с новой строки. Последняя строка выделится лаймом', 2) + ta('heroText', 'Текст под заголовком', '', 3) +
       f('heroCaption', 'Подпись на фото', 'Новая коллекция уже в шоуруме') +
+      f('heroTag', 'Ценник «кроссовки от» на фото', '3 990 ₸', 'Пусто — ценник не показывается') +
       '<div class="row2"><div class="fld"><span>Главное фото</span><div class="media" id="siteHero"></div></div><div class="fld"><span>Маленькое фото</span><div class="media" id="siteHero2"></div></div></div></section>' +
       '<section class="box"><h3>Бегущая строка</h3>' + ta('marquee', 'Фразы', 'Каждая фраза — с новой строки', 5) + '</section>' +
       '<section class="box"><h3>Шоурум</h3>' + f('aboutTitle', 'Заголовок', '') + ta('aboutText', 'Текст', '', 4) + '<div class="fld"><span>Фото шоурума (до 3)</span><div class="media" id="siteGal"></div></div></section>' +

@@ -40,6 +40,7 @@
     $('#heroImg').src = BN.src(S.heroImage || 'media/brothers-hero.webp');
     if (S.heroImage2) $('#heroImg2').src = BN.src(S.heroImage2); else $('#heroMiniBox').hidden = true;
     $('#heroCap').textContent = S.heroCaption || 'Новая коллекция в шоуруме';
+    if (S.heroTag !== undefined) { $('#heroTag').hidden = !S.heroTag; $('#heroTagVal').textContent = S.heroTag || ''; }
     $('#factReviews').textContent = (S.reviews ? S.reviews + ' отзывов' : 'отзывы') + ' в 2ГИС';
     var brands = {}; (D.items || []).forEach(function (it) { if (it.brand && it.brand !== 'Братья Немодные' && it.status !== 'hidden') brands[it.brand] = 1; });
     var bl = Object.keys(brands).concat(['Nike', 'Jordan', 'Adidas', 'New Balance', 'The North Face', 'Carhartt WIP', 'Stüssy', 'ASICS']).filter(function (b, i, a) { return a.indexOf(b) === i; });
@@ -70,6 +71,8 @@
 
     var links = ['<a target="_blank" rel="noopener" href="' + esc(wa()) + '">WhatsApp +' + esc(BN.digits(S.whatsapp)) + '</a>'];
     br.forEach(function (b) { if (b.instagram) links.push('<a target="_blank" rel="noopener" href="' + esc(ig(b.instagram)) + '">Instagram · ' + esc(b.city) + '</a>'); });
+    var other = BN.CITIES[BN.CITY === 'krg' ? 'ast' : 'krg'];
+    links.push('<a href="' + esc(other.url) + '">Мы ' + esc(other.where) + ' →</a>');
     $('#footLinks').innerHTML = links.join('');
     $('#year').textContent = new Date().getFullYear();
   }

@@ -360,3 +360,12 @@ body.lock { overflow: hidden; }
   .filters .select { flex: 1 1 140px; }
   .branch { padding: 24px; }
 }
+
+/* ---------- переключатель города ---------- */
+.city-sw { display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px 0 12px; border-radius: 99px; border: 1.5px solid rgba(255,255,255,.18); color: #fff; font-weight: 800; font-size: 14px; transition: border-color .2s; white-space: nowrap; }
+.city-sw svg { width: 18px; height: 18px; fill: none; stroke: var(--lime); stroke-width: 2.2; }
+.city-sw em { font-style: normal; font-weight: 700; font-size: 12.5px; color: rgba(255,255,255,.5); transition: color .2s; }
+.city-sw:hover { border-color: var(--lime); }
+.city-sw:hover em { color: var(--lime); }
+@media (max-width: 1080px) { .city-sw em { display: none; } }
+@media (max-width: 640px) { .city-sw { display: none; } }

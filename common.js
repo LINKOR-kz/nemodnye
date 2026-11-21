@@ -5,6 +5,14 @@
   /* Сервер админки (Cloudflare Worker): каталог, фото и видео */
   var API = 'https://nemodnye-admin.sentora-admin-worker.workers.dev';
   if (/^(localhost|127\.0\.0\.1)$/.test(location.hostname) && /[?&]api=local/.test(location.search)) API = 'http://127.0.0.1:8787';
+  /* Город сайта: у Караганды и Астаны свои каталоги и свои админки */
+  var CITY = w.BN_CITY === 'ast' ? 'ast' : 'krg';
+  var BASE = w.BN_BASE || '';
+  var APIC = API + '/' + CITY;
+  var CITIES = {
+    krg: { id: 'krg', name: 'Караганда', where: 'в Караганде', url: BASE + 'karaganda/' },
+    ast: { id: 'ast', name: 'Астана', where: 'в Астане', url: BASE + 'astana/' }
+  };
 
   /* Готовые сетки размеров */
   var SIZE_PRESETS = {
@@ -34,25 +42,30 @@
   function nl2br(s) { return esc(s).replace(/\n/g, '<br>'); }
 
   /* ---------- Каталог: сначала с сервера, если пусто или нет связи — из файла на сайте ---------- */
-  function fileCatalog() { return fetch('data/catalog.json?t=' + Date.now()).then(function (r) { return r.json(); }); }
+  function fileCatalog() { return fetch(BASE + 'data/catalog-' + CITY + '.json?t=' + Date.now()).then(function (r) { return r.json(); }); }
   function loadCatalog() {
     var ctl = w.AbortController ? new AbortController() : null;
     var t = setTimeout(function () { if (ctl) ctl.abort(); }, 5000);
-    return fetch(API + '/catalog', { cache: 'no-store', signal: ctl ? ctl.signal : undefined })
+    return fetch(APIC + '/catalog', { cache: 'no-store', signal: ctl ? ctl.signal : undefined })
       .then(function (r) { clearTimeout(t); if (!r.ok) throw new Error('empty'); return r.json(); })
       .then(function (d) { return { data: d, server: true }; })
       .catch(function () { clearTimeout(t); return fileCatalog().then(function (d) { return { data: d, server: false }; }); });
   }
 
   /* ---------- Файлы: kv:<id> — файл на сервере, остальное — файл на сайте ---------- */
-  function src(ref) { return ref && ref.indexOf('kv:') === 0 ? API + '/m/' + ref.slice(3) : (ref || ''); }
+  function src(ref) {
+    if (!ref) return '';
+    if (ref.indexOf('kv:') === 0) return API + '/m/' + ref.slice(3);
+    if (/^(https?:|data:|blob:|\/)/.test(ref)) return ref;
+    return BASE + ref;
+  }
 
   function uploadFile(blob, token, onProgress) {
     var type = blob.type || 'application/octet-stream';
     if (type === 'video/x-m4v') type = 'video/mp4';
     var h = { 'Content-Type': 'application/json', Authorization: 'Bearer ' + token };
     function call(path, opts) {
-      return fetch(API + path, opts).then(function (r) {
+      return fetch(APIC + path, opts).then(function (r) {
         return r.json().catch(function () { return {}; }).then(function (j) { if (!r.ok) { var e = new Error(j.error || ('Ошибка ' + r.status)); e.status = r.status; throw e; } return j; });
       });
     }
@@ -135,7 +148,7 @@
   };
 
   w.BN = {
-    API: API, SIZE_PRESETS: SIZE_PRESETS, GENDER: GENDER, TAGS: TAGS, BRANDS: BRANDS, PROMO_THEMES: PROMO_THEMES, FIG: FIG,
+    API: API, APIC: APIC, CITY: CITY, BASE: BASE, CITIES: CITIES, SIZE_PRESETS: SIZE_PRESETS, GENDER: GENDER, TAGS: TAGS, BRANDS: BRANDS, PROMO_THEMES: PROMO_THEMES, FIG: FIG,
     esc: esc, money: money, norm: norm, uid: uid, digits: digits, nl2br: nl2br,
     loadCatalog: loadCatalog, src: src, uploadFile: uploadFile, compressImage: compressImage,
     promoLive: promoLive, pricing: pricing, sizesIn: sizesIn, inStock: inStock, logo: logo, today: today
