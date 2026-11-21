@@ -1,0 +1,102 @@
+{
+  "settings": {
+    "name": "Братья Немодные",
+    "whatsapp": "77001621162",
+    "instagram": "br.nemodnye",
+    "marquee": ["Кроссовки от 3 990 ₸", "Рассрочка Kaspi 0-0-24", "Новая коллекция пуховиков", "Ждём вас с 10:00 до 20:00", "Караганда · Астана"],
+    "heroKicker": "Кроссовки · Одежда · Куртки",
+    "heroTitle": "Не модно.\nА стильно.",
+    "heroText": "Оригинальные кроссовки, пуховики и streetwear в Караганде и Астане. Кроссовки от 3 990 ₸ — приходите примерить или заказывайте в WhatsApp.",
+    "heroImage": "media/showroom-led.webp",
+    "aboutTitle": "Шоурум, куда хочется вернуться",
+    "aboutText": "Бетон, неон и стены из кроссовок. В шоуруме можно спокойно всё примерить, а мы подберём размер и образ целиком — от кепки до кроссовок. Не нашли нужный размер? Напишите нам — привезём.",
+    "rating": "4.9",
+    "reviews": "1028",
+    "gallery": ["media/showroom-led.webp", "media/showroom-racks.webp", "media/store-night.webp"],
+    "branches": [
+      { "city": "Караганда", "address": "пр. Бухар-жырау, 53а", "hours": "Ежедневно 10:00–20:00", "whatsapp": "77001621162", "instagram": "br.nemodnye", "map": "https://2gis.kz/karaganda/search/%D0%91%D1%80%D0%B0%D1%82%D1%8C%D1%8F%20%D0%BD%D0%B5%D0%BC%D0%BE%D0%B4%D0%BD%D1%8B%D0%B5" },
+      { "city": "Астана", "address": "ул. Керей-Жанибек хандар, 44/4", "hours": "Ежедневно 10:00–20:00", "whatsapp": "", "instagram": "br.nemodnye_ast", "map": "https://2gis.kz/astana/search/%D0%91%D1%80%D0%B0%D1%82%D1%8C%D1%8F%20%D0%BD%D0%B5%D0%BC%D0%BE%D0%B4%D0%BD%D1%8B%D0%B5" }
+    ]
+  },
+  "cats": [
+    { "id": "sneakers", "name": "Кроссовки" },
+    { "id": "jackets", "name": "Куртки и пуховики" },
+    { "id": "suits", "name": "Костюмы" },
+    { "id": "tops", "name": "Футболки и худи" },
+    { "id": "pants", "name": "Штаны и джинсы" },
+    { "id": "acc", "name": "Аксессуары" }
+  ],
+  "promos": [
+    {
+      "id": "p-kaspi", "active": true, "hero": true, "theme": "red",
+      "badge": "Kaspi 0-0-24", "title": "Рассрочка на 24 месяца",
+      "text": "Покупайте кроссовки и куртки в рассрочку Kaspi 0-0-24 — без переплат и первого взноса. Оформление прямо в шоуруме за пару минут.",
+      "image": "media/showroom-racks.webp", "video": "", "from": "", "to": "",
+      "percent": 0, "applyTo": "none", "cats": [], "items": [], "button": "Узнать подробнее"
+    },
+    {
+      "id": "p-friday", "active": true, "hero": true, "theme": "lime",
+      "badge": "−15%", "title": "Чёрная пятница на пуховики",
+      "text": "Минус 15% на все куртки и пуховики до конца ноября. Скидка уже учтена в ценах на сайте.",
+      "image": "media/puffers-black.webp", "video": "", "from": "2026-11-20", "to": "2026-11-30",
+      "percent": 15, "applyTo": "cat", "cats": ["jackets"], "items": [], "button": "Смотреть пуховики"
+    },
+    {
+      "id": "p-3990", "active": true, "hero": false, "theme": "black",
+      "badge": "от 3 990 ₸", "title": "Кроссовки от 3 990 ₸",
+      "text": "Отдельная стойка с кроссовками по специальной цене. Размеры заканчиваются быстро — уточняйте наличие в WhatsApp.",
+      "image": "media/asics-gel-nyc.webp", "video": "", "from": "", "to": "",
+      "percent": 0, "applyTo": "none", "cats": [], "items": [], "button": "Спросить размеры"
+    }
+  ],
+  "items": [
+    { "id": "i-asics", "name": "GEL-NYC «Black Graphite»", "brand": "ASICS", "cat": "sneakers", "gender": "uni", "price": 52900, "oldPrice": 59900, "tags": ["new"], "status": "active",
+      "desc": "Ретро-раннинг с подошвой GEL — мягкие на весь день. Верх из сетки и замши, чёрный с графитовыми вставками.",
+      "sizeType": "shoes", "sizes": [{ "s": "40", "q": 1 }, { "s": "41", "q": 2 }, { "s": "42", "q": 3 }, { "s": "42.5", "q": 0 }, { "s": "43", "q": 2 }, { "s": "44", "q": 1 }, { "s": "45", "q": 0 }],
+      "photos": ["media/asics-gel-nyc.webp"], "video": "" },
+    { "id": "i-nb9060", "name": "9060 «Burgundy»", "brand": "New Balance", "cat": "sneakers", "gender": "her", "price": 54900, "oldPrice": 0, "tags": ["hit"], "status": "active",
+      "desc": "Массивная подошва, бордовая замша и сетка. Хит сезона, который подходит и к широким джинсам, и к джоггерам.",
+      "sizeType": "shoes", "sizes": [{ "s": "36", "q": 1 }, { "s": "37", "q": 2 }, { "s": "37.5", "q": 1 }, { "s": "38", "q": 2 }, { "s": "39", "q": 0 }, { "s": "40", "q": 1 }],
+      "photos": ["media/nb-9060.webp"], "video": "" },
+    { "id": "i-adidas-puffer", "name": "Пуховик Originals красный", "brand": "Adidas", "cat": "jackets", "gender": "uni", "price": 64900, "oldPrice": 0, "tags": ["new"], "status": "active",
+      "desc": "Объёмный пуховик с фирменными лампасами. Высокий ворот, тёплый наполнитель — на казахстанскую зиму.",
+      "sizeType": "clothes", "sizes": [{ "s": "S", "q": 1 }, { "s": "M", "q": 2 }, { "s": "L", "q": 2 }, { "s": "XL", "q": 1 }],
+      "photos": ["media/track-jacket-red.webp"], "video": "" },
+    { "id": "i-yellow", "name": "Пуховик oversize жёлтый", "brand": "Братья Немодные", "cat": "jackets", "gender": "his", "price": 49900, "oldPrice": 0, "tags": [], "status": "active",
+      "desc": "Яркий пуховик свободного кроя с капюшоном и чёрными вставками. Заметно в любом сугробе.",
+      "sizeType": "clothes", "sizes": [{ "s": "M", "q": 1 }, { "s": "L", "q": 2 }, { "s": "XL", "q": 2 }, { "s": "2XL", "q": 1 }],
+      "photos": ["media/puffer-yellow.webp"], "video": "" },
+    { "id": "i-matte", "name": "Пуховик матовый стёганый", "brand": "Братья Немодные", "cat": "jackets", "gender": "uni", "price": 39900, "oldPrice": 0, "tags": ["hit"], "status": "active",
+      "desc": "Лёгкий и очень тёплый. Чёрный, графит и молочный — уточняйте цвет в WhatsApp.",
+      "sizeType": "clothes", "sizes": [{ "s": "S", "q": 2 }, { "s": "M", "q": 3 }, { "s": "L", "q": 3 }, { "s": "XL", "q": 2 }, { "s": "2XL", "q": 1 }],
+      "photos": ["media/puffers-black.webp"], "video": "" },
+    { "id": "i-suit-red", "name": "Костюм oversize «Not from Paris»", "brand": "Братья Немодные", "cat": "suits", "gender": "uni", "price": 45000, "oldPrice": 0, "tags": ["hit"], "status": "active",
+      "desc": "Унисекс-костюм свободного кроя: футболка и широкие штаны с принтом. «Not from Paris — it's from Kazakhstan».",
+      "sizeType": "ru", "sizes": [{ "s": "42", "q": 1 }, { "s": "44", "q": 2 }, { "s": "46", "q": 2 }, { "s": "48", "q": 2 }, { "s": "50", "q": 1 }, { "s": "52", "q": 1 }, { "s": "54", "q": 0 }, { "s": "56", "q": 1 }],
+      "photos": ["media/suit-red.webp"], "video": "" },
+    { "id": "i-tracksuit", "name": "Спортивный костюм с лампасами", "brand": "Adidas", "cat": "suits", "gender": "uni", "price": 34900, "oldPrice": 39900, "tags": [], "status": "active",
+      "desc": "Классика с тремя полосками: олимпийка и широкие брюки. Чёрный и красный цвета.",
+      "sizeType": "clothes", "sizes": [{ "s": "S", "q": 1 }, { "s": "M", "q": 2 }, { "s": "L", "q": 1 }, { "s": "XL", "q": 0 }],
+      "photos": ["media/tracksuit-duo.webp"], "video": "" },
+    { "id": "i-blackset", "name": "Комплект футболка + джоггеры", "brand": "Братья Немодные", "cat": "suits", "gender": "his", "price": 29900, "oldPrice": 0, "tags": ["new"], "status": "active",
+      "desc": "Плотная оверсайз-футболка и джоггеры на манжетах. Базовый чёрный, который носится со всем.",
+      "sizeType": "clothes", "sizes": [{ "s": "M", "q": 2 }, { "s": "L", "q": 3 }, { "s": "XL", "q": 2 }, { "s": "2XL", "q": 1 }],
+      "photos": ["media/black-set.webp"], "video": "" },
+    { "id": "i-tee", "name": "Футболка oversize белая", "brand": "Братья Немодные", "cat": "tops", "gender": "uni", "price": 9990, "oldPrice": 0, "tags": [], "status": "active",
+      "desc": "Плотный хлопок 240 г, спущенное плечо. Отлично сидит с широкими штанами.",
+      "sizeType": "clothes", "sizes": [{ "s": "S", "q": 3 }, { "s": "M", "q": 4 }, { "s": "L", "q": 4 }, { "s": "XL", "q": 2 }],
+      "photos": ["media/tee-white.webp"], "video": "" },
+    { "id": "i-windbreaker", "name": "Ветровка ретро синяя", "brand": "Братья Немодные", "cat": "jackets", "gender": "his", "price": 27900, "oldPrice": 0, "tags": ["last"], "status": "active",
+      "desc": "Ветровка в стиле 2000-х со светоотражающими полосами. На межсезонье и под пуховик.",
+      "sizeType": "clothes", "sizes": [{ "s": "M", "q": 0 }, { "s": "L", "q": 1 }, { "s": "XL", "q": 1 }],
+      "photos": ["media/jacket-blue.webp"], "video": "" },
+    { "id": "i-jeans", "name": "Джинсы wide-leg washed", "brand": "Братья Немодные", "cat": "pants", "gender": "uni", "price": 24900, "oldPrice": 0, "tags": ["new"], "status": "active",
+      "desc": "Широкие джинсы с варкой и низкой посадкой. Плотный деним, не растягиваются.",
+      "sizeType": "jeans", "sizes": [{ "s": "28", "q": 1 }, { "s": "30", "q": 2 }, { "s": "31", "q": 2 }, { "s": "32", "q": 3 }, { "s": "33", "q": 1 }, { "s": "34", "q": 2 }, { "s": "36", "q": 0 }],
+      "photos": ["media/jeans-wide.webp"], "video": "" },
+    { "id": "i-cap", "name": "Кепка вельветовая чёрная", "brand": "Братья Немодные", "cat": "acc", "gender": "uni", "price": 6990, "oldPrice": 0, "tags": [], "status": "active",
+      "desc": "Мягкий козырёк, регулируемый ремешок. Один размер подходит всем.",
+      "sizeType": "one", "sizes": [{ "s": "ONE SIZE", "q": 5 }],
+      "photos": ["media/cap-black.webp"], "video": "" }
+  ]
+}
