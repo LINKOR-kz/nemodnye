@@ -11,7 +11,7 @@
    "Караганда · Астана"
   ],
   "heroKicker": "Новая коллекция · Зима 2026",
-  "heroTitle": "Не модно.\nА стильно.",
+  "heroTitle": "Братья\nНемодные",
   "heroText": "Оригинальные кроссовки, пуховики и streetwear в Караганде и Астане. Кроссовки от 3 990 ₸ — приходите примерить или заказывайте в WhatsApp.",
   "heroImage": "media/brothers-hero.webp",
   "aboutTitle": "Шоурум, куда хочется вернуться",
@@ -20,7 +20,7 @@
   "reviews": "1028",
   "gallery": [
    "media/showroom-hex.webp",
-   "media/brothers-color.webp",
+   "media/kaws-fitting.webp",
    "media/store-front.webp"
   ],
   "branches": [
@@ -41,7 +41,7 @@
     "map": "https://2gis.kz/astana/search/%D0%91%D1%80%D0%B0%D1%82%D1%8C%D1%8F%20%D0%BD%D0%B5%D0%BC%D0%BE%D0%B4%D0%BD%D1%8B%D0%B5"
    }
   ],
-  "heroImage2": "media/kaws-fitting.webp",
+  "heroImage2": "media/brothers-color.webp",
   "heroCaption": "Новая коллекция уже в шоуруме"
  },
  "cats": [
