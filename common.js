@@ -118,7 +118,12 @@
 
   /* ---------- Логотип (как на вывеске: «БРАТЬЯ / НЕ зеркально / МОДНЫЕ») ---------- */
   function logo(cls) {
-    return '<span class="bn-logo ' + (cls || '') + '" aria-label="Братья Немодные"><b>БРАТЬЯ</b><i>НЕ</i><b>МОДНЫЕ</b></span>';
+    return '<svg class="bn-logo ' + (cls || '') + '" viewBox="0 0 120 120" role="img" aria-label="Братья Немодные">' +
+      '<rect width="120" height="120" rx="22" fill="#A6DD1E"/>' +
+      '<g fill="#0A0A0A" font-family="Unbounded, Arial Black, sans-serif" font-weight="900">' +
+      '<text x="15" y="35" font-size="17.5" textLength="90" lengthAdjust="spacingAndGlyphs">БРАТЬЯ</text>' +
+      '<text transform="translate(120 0) scale(-1 1)" x="13" y="84" font-size="56" textLength="94" lengthAdjust="spacingAndGlyphs">НЕ</text>' +
+      '<text x="15" y="104" font-size="17.5" textLength="90" lengthAdjust="spacingAndGlyphs">МОДНЫЕ</text></g></svg>';
   }
 
   /* ---------- Силуэты игрушек для фона (дизайнерская фигурка, мишка-кубрик, кубики конструктора) ---------- */

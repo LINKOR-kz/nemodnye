@@ -556,7 +556,8 @@
       '<section class="box"><h3>Контакты</h3>' + f('whatsapp', 'WhatsApp для заказов', '77001621162', 'Номер без +, сюда приходят все заказы с сайта') + f('instagram', 'Instagram', 'br.nemodnye', 'Имя аккаунта без @') +
       '<div class="row2">' + f('rating', 'Рейтинг 2ГИС', '4.9') + f('reviews', 'Кол-во отзывов', '1028') + '</div></section>' +
       '<section class="box"><h3>Главный экран</h3>' + f('heroKicker', 'Надпись над заголовком', 'Кроссовки · Одежда · Куртки') + ta('heroTitle', 'Большой заголовок', 'Каждая строка — с новой строки. Последняя строка выделится лаймом', 2) + ta('heroText', 'Текст под заголовком', '', 3) +
-      '<div class="fld"><span>Фото на главной</span><div class="media" id="siteHero"></div></div></section>' +
+      f('heroCaption', 'Подпись на фото', 'Новая коллекция уже в шоуруме') +
+      '<div class="row2"><div class="fld"><span>Главное фото</span><div class="media" id="siteHero"></div></div><div class="fld"><span>Маленькое фото</span><div class="media" id="siteHero2"></div></div></div></section>' +
       '<section class="box"><h3>Бегущая строка</h3>' + ta('marquee', 'Фразы', 'Каждая фраза — с новой строки', 5) + '</section>' +
       '<section class="box"><h3>Шоурум</h3>' + f('aboutTitle', 'Заголовок', '') + ta('aboutText', 'Текст', '', 4) + '<div class="fld"><span>Фото шоурума (до 3)</span><div class="media" id="siteGal"></div></div></section>' +
       '<section class="box" style="grid-column:1/-1"><h3>Адреса шоурумов</h3><div class="site-grid" id="siteBranches"></div><button type="button" class="tbtn" id="brAdd" style="justify-self:start">+ Добавить шоурум</button></section>';
@@ -565,6 +566,7 @@
   function renderSiteMedia() {
     var s = SD;
     $('#siteHero').innerHTML = s.heroImage ? '<div class="mtile main">' + mediaTag(s.heroImage) + '<div class="ctl"><span></span><button type="button" class="x" data-shero>×</button></div></div>' : '<div class="madd" data-sheroadd tabindex="0" role="button"><b>+</b>Фото</div>';
+    $('#siteHero2').innerHTML = s.heroImage2 ? '<div class="mtile">' + mediaTag(s.heroImage2) + '<div class="ctl"><span></span><button type="button" class="x" data-shero2>×</button></div></div>' : '<div class="madd" data-shero2add tabindex="0" role="button"><b>+</b>Фото</div>';
     $('#siteGal').innerHTML = s.gallery.map(function (g, i) { return '<div class="mtile">' + mediaTag(g) + '<div class="ctl"><span><button type="button" data-gmv="' + i + '">‹</button></span><button type="button" class="x" data-grm="' + i + '">×</button></div></div>'; }).join('') +
       (s.gallery.length < 3 ? '<div class="madd" data-galadd tabindex="0" role="button"><b>+</b>Фото</div>' : '');
   }
@@ -586,6 +588,8 @@
     var t;
     if (e.target.closest('[data-shero]')) { SD.heroImage = ''; return renderSiteMedia(); }
     if (e.target.closest('[data-sheroadd]')) return pickFiles('image/*').then(function (fs) { if (fs.length) uploadMany(fs).then(function (r) { if (r[0]) { SD.heroImage = r[0]; renderSiteMedia(); } }); });
+    if (e.target.closest('[data-shero2]')) { SD.heroImage2 = ''; return renderSiteMedia(); }
+    if (e.target.closest('[data-shero2add]')) return pickFiles('image/*').then(function (fs) { if (fs.length) uploadMany(fs).then(function (r) { if (r[0]) { SD.heroImage2 = r[0]; renderSiteMedia(); } }); });
     if (e.target.closest('[data-galadd]')) return pickFiles('image/*', true).then(function (fs) { if (fs.length) uploadMany(fs.slice(0, 3 - SD.gallery.length)).then(function (r) { SD.gallery = SD.gallery.concat(r); renderSiteMedia(); }); });
     if ((t = e.target.closest('[data-grm]'))) { SD.gallery.splice(+t.getAttribute('data-grm'), 1); return renderSiteMedia(); }
     if ((t = e.target.closest('[data-gmv]'))) { var i = +t.getAttribute('data-gmv'); moveArr(SD.gallery, i, i - 1); return renderSiteMedia(); }

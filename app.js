@@ -7,7 +7,7 @@
 
   /* ---------- силуэты на фоне ---------- */
   var LAYOUTS = {
-    hero: [['figure', 4, 14, 150, -8], ['brick', 44, 6, 120, 10, 'outline'], ['bear', 88, 60, 130, 6], ['mini', 36, 74, 90, -6], ['brick', 92, 6, 90, -14, 'lime'], ['figure', 66, 82, 80, 12, 'outline']],
+    hero: [['figure', 2, 58, 170, -8], ['bear', 44, 4, 110, 8], ['brick', 50, 80, 120, 6, 'lime'], ['mini', 93, 70, 90, -6]],
     catalog: [['bear', -2, 4, 160, 8], ['figure', 92, 30, 170, -6], ['brick', 6, 70, 130, -10], ['mini', 88, 84, 110, 4]],
     dark: [['figure', 2, 8, 200, -6], ['bear', 90, 64, 170, 8, 'lime'], ['brick', 52, 86, 140, 6], ['mini', 44, 2, 100, -10]]
   };
@@ -27,7 +27,6 @@
   /* ---------- оформление из настроек ---------- */
   function renderShell() {
     $('#logo').innerHTML = BN.logo();
-    $('#heroLogo').innerHTML = BN.logo();
     $('#footLogo').innerHTML = BN.logo();
     var m = (S.marquee || []).filter(Boolean);
     if (!m.length) m = ['Кроссовки', 'Одежда', 'Куртки'];
@@ -36,9 +35,16 @@
 
     $('#heroKicker').textContent = S.heroKicker || '';
     var lines = String(S.heroTitle || 'Братья Немодные').split('\n');
-    $('#heroTitle').innerHTML = lines.map(function (l, i) { return i === lines.length - 1 && lines.length > 1 ? '<em>' + esc(l) + '</em>' : esc(l); }).join('<br>');
+    $('#heroTitle').innerHTML = lines.map(function (l, i) { return '<span class="ln"><span style="animation-delay:' + (0.1 + i * 0.12) + 's"' + (i === lines.length - 1 && lines.length > 1 ? ' class="hl"' : '') + '>' + esc(l) + '</span></span>'; }).join('');
     $('#heroText').textContent = S.heroText || '';
-    $('#heroImg').src = BN.src(S.heroImage || 'media/showroom-led.webp');
+    $('#heroImg').src = BN.src(S.heroImage || 'media/brothers-hero.webp');
+    if (S.heroImage2) $('#heroImg2').src = BN.src(S.heroImage2); else $('#heroMiniBox').hidden = true;
+    $('#heroCap').textContent = S.heroCaption || 'Новая коллекция в шоуруме';
+    $('#factReviews').textContent = (S.reviews ? S.reviews + ' отзывов' : 'отзывы') + ' в 2ГИС';
+    var brands = {}; (D.items || []).forEach(function (it) { if (it.brand && it.brand !== 'Братья Немодные' && it.status !== 'hidden') brands[it.brand] = 1; });
+    var bl = Object.keys(brands).concat(['Nike', 'Jordan', 'Adidas', 'New Balance', 'The North Face', 'Carhartt WIP', 'Stüssy', 'ASICS']).filter(function (b, i, a) { return a.indexOf(b) === i; });
+    var brun = bl.map(function (b) { return '<span>' + esc(b) + '</span>'; }).join('');
+    $('#brands').innerHTML = brun + brun;
     $('#factRating').textContent = S.rating || '4.9';
     $('#ratingNum').textContent = S.rating || '4.9';
     $('#ratingText').textContent = (S.reviews ? S.reviews + ' ' : '') + 'отзывов в 2ГИС';

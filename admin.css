@@ -14,7 +14,7 @@ body.adm { background: var(--concrete); min-height: 100vh; }
 /* вход */
 .login { min-height: 100vh; min-height: 100dvh; display: grid; place-items: center; padding: 20px; background: var(--ink); position: relative; overflow: hidden; }
 .login__box { position: relative; z-index: 1; width: min(400px, 100%); background: #fff; border-radius: 26px; padding: 36px 28px 26px; display: grid; gap: 16px; text-align: center; }
-.login__logo .bn-logo { font-size: 13px; }
+.login__logo .bn-logo { width: 84px; margin: 0 auto; }
 .login h1 { margin: 0; font: 900 26px var(--display); text-transform: uppercase; letter-spacing: -.03em; }
 .login p { margin: 0; color: var(--muted); font-weight: 600; }
 .login .fld { text-align: left; }
@@ -24,7 +24,7 @@ body.adm { background: var(--concrete); min-height: 100vh; }
 /* каркас */
 .app { display: grid; grid-template-columns: 248px 1fr; min-height: 100vh; }
 .side { position: sticky; top: 0; height: 100vh; background: var(--ink); color: #fff; display: flex; flex-direction: column; padding: 24px 16px; gap: 28px; }
-.side__logo .bn-logo { font-size: 10px; }
+.side__logo .bn-logo { width: 56px; }
 .tabs { display: grid; gap: 4px; }
 .tabs button { display: flex; align-items: center; gap: 12px; height: 50px; padding: 0 14px; border-radius: 14px; border: 0; background: none; color: #bdbdb6; font-weight: 800; font-size: 15px; text-align: left; }
 .tabs button svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linejoin: round; flex: none; }
