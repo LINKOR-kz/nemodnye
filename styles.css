@@ -369,3 +369,9 @@ body.lock { overflow: hidden; }
 .city-sw:hover em { color: var(--lime); }
 @media (max-width: 1080px) { .city-sw em { display: none; } }
 @media (max-width: 640px) { .city-sw { display: none; } }
+
+/* ---------- подпись разработчика ---------- */
+.foot__copy { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
+.made { color: rgba(255,255,255,.45); font-size: 13px; font-weight: 600; }
+.made b { color: var(--lime); font-weight: 800; letter-spacing: .02em; }
+.made--pick { position: absolute; left: 0; right: 0; bottom: 18px; margin: 0; text-align: center; }
